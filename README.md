@@ -1,4 +1,5 @@
-# ⚛️ Quantum Double-Slit Experiment Simulator
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Maximusadiq/quantum-double-slit-simulator/blob/main/colab_notebook.ipynb)
+# Quantum Double-Slit Experiment Simulator
 
 A completely quantum-circuit based simulation of the famous Double-Slit Experiment. Rather than just calculating math formulas, this project physically models the experiment through logical superposition, controlled phase-shifts, and phase-kickbacks built via **Qiskit**. 
 
@@ -40,7 +41,6 @@ We define the physical realm purely via qubits!
 3. **The Distance**: A series of `Controlled-Phase` gates entangles the paths with the screen, applying a shifting physical phase that depends intrinsically on the simulated wavelength, distance to screen, and slit spacing.
 4. **Phase Kickback**: We apply a second `H` gate back on the path qubit. This acts exactly like the interference of physical light waves—combining the relative phases into probability bounds!
 
-![Circuit Diagram](circuit_diagram.png)
 
 ## The Observer Effect 👁️
 The most fascinating element of quantum mechanics is that **looking at it changes it**. If you measure the particle at the slits to see *which* slit it travels through, the interference pattern disappears, leaving just two basic "particle-like" bands.
@@ -66,4 +66,13 @@ Found in `config.py`.
 | `SCREEN_DIST (L)`| Physical | Increasing distance enlarges and stretches the bands over larger screen gaps. |
 
 ## What I Learned
-[STUDENT/BUILDER: Add your personal thoughts, struggles, or breakthroughs regarding the Double Slit project here.]
+
+I came into this as a complete beginner to quantum computing. My only background 
+was the double-slit experiment from AP Physics 2. Building this taught me that 
+quantum gates aren't just abstract math; they encode real physical phenomena. 
+Superposition, phase, and measurement are the same concepts in both physics class 
+and a Qiskit circuit. Seeing the interference pattern appear for the first time 
+was the moment it all clicked for me.
+
+The hardest part was understanding how phase kickback converts phase differences 
+into measurable probabilities, and debugging Qiskit's bitstring output format. 
